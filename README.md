@@ -74,28 +74,46 @@ melakukannya.
 
 ## JMeter Report and Test Results
 ### **Endpoint** `/all-student`
-Test Result:
+Test Result JMeter
 <img src="src/image/testresults1.jpg" alt="all-student">
-Before Optimization:
+Before Optimization JMeter:
 <img src="src/image/jmeter-all-student.jpg" alt="all-student"/>
-After Optimization:
+After Optimization JMeter:
 <img src="src/image/after-refactor-all-student.jpg" alt="all-student"/>
 
+Execution Time `getAllStudentWithCourses()` from Intellij Profiler:
+
+| Before | After | Diff Percentage |
+| -- | -- | -- |
+| 17,542 ms | 1,466 ms | 91.65% |
+
 ### **Endpoint** `/all-student-name`
-Test Result:
+Test Result JMeter:
 <img src="src/image/testresults2.jpg" alt="all-student-name">
-Before Optimization:
+Before Optimization JMeter:
 <img src="src/image/jmeter-all-student-name.jpg" alt="all-student-name"/>
-After Optimization:
+After Optimization JMeter:
 <img src="src/image/after-refactor-all-student-name.jpg" alt="all-student-name"/>
 
+Execution Time `joinStudentNames()` from Intellij Profiler:
+
+| Before | After  | Diff Percentage |
+|--------|--------| -- |
+| 979 ms | 230 ms | 76.5% |
+
 ### **Endpoint** `/highest-gpa`
-Test Result:
+Test Result JMeter:
 <img src="src/image/testresults3.jpg" alt="highest-gpa">
-Before Optimization:
+Before Optimization JMeter:
 <img src="src/image/jmeter-highest-gpa.jpg" alt="highest-gpa"/>
-After Optimization:
+After Optimization JMeter:
 <img src="src/image/after-refactor-highest-gpa.jpg" alt="highest-gpa"/>
+
+Execution Time `findStudentWithHighestGpa()` from Intellij Profiler:
+
+| Before | After | Diff Percentage |
+|--------|-------| -- |
+| 180 ms | 40 ms | 77.7% |
 
 Dari gambar, terlihat bahwa terdapat peningkatan performa berdasarkan hasil _sample time_ yang diperoleh.
 Waktu eksekusi sebelum optimisasi lebih lama dibandingkan waktu eksekusi setelah optimisasi. Hal yang saya
